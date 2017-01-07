@@ -6,6 +6,7 @@ categories: JavaScript
 ---
 
 {% highlight javascript %}
+
 var op = function(){};
 op.prototype.add = function() {
     var i, s = 0;
@@ -24,6 +25,7 @@ op.prototype.mul = function() {
     return m;
 }
 console.log(i.mul(1, 2, 3, 4));
+
 {% endhighlight %}
 
 You need to create object instances, and after the initialization you need to set some function for all the instnaces.
