@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JavaScript Object Instances"
-date:   2016-12-27 03:39:33 +0100
+date:   2016-12-05 03:39:33 +0100
 categories: JavaScript
 ---
 You need to create object instances, and after the initialization you need to set some function for all the instnaces.
@@ -27,13 +27,14 @@ op.prototype.mul = function() {
 console.log(i.mul(1, 2, 3, 4));
 ```
 
-This will return `10, 24`.
+This will return **10, 24**.
+
 Any other instance we create with the `new` will have the `add` and `mul` functions.
 
 Even if we create new instance `i2` and add the `quad` to the instance prototype we will see all instances share the same prototype.
 
 
-{% highlight JavaScript %}
+```javascript
 var i2 = new op;
 Object.getPrototypeOf(i2).quad = function(){
 	var i, qs = 0;
@@ -45,7 +46,6 @@ Object.getPrototypeOf(i2).quad = function(){
 
 console.log(i2.quad(1, 2, 3, 4));
 console.log(i.quad(1, 2, 3, 4));
+```
 
-{% endhighlight %}
-
-Returns <pre>30,30</pre>
+Returns **30,30**
