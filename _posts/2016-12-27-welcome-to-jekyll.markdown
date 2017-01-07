@@ -6,7 +6,7 @@ categories: JavaScript
 ---
 You need to create object instances, and after the initialization you need to set some function for all the instnaces.
 
-{% highlight JavaScript %}
+```JavaaScript
 var op = function(){};
 op.prototype.add = function() {
     var i, s = 0;
@@ -25,9 +25,9 @@ op.prototype.mul = function() {
     return m;
 }
 console.log(i.mul(1, 2, 3, 4));
-{% endhighlight %}
+```
 
-This will return <pre>10, 24.</pre>
+This will return `10, 24`.
 Any other instance we create with the `new` will have the `add` and `mul` functions.
 
 Even if we create new instance `i2` and add the `quad` to the instance prototype we will see all instances share the same prototype.
