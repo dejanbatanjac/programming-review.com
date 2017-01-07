@@ -5,7 +5,7 @@ date:   2016-12-27 03:39:33 +0100
 categories: JavaScript
 ---
 
-{% highlight javascript %}
+{% highlight JavaScript %}
 
 var op = function(){};
 op.prototype.add = function() {
