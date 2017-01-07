@@ -6,7 +6,7 @@ categories: JavaScript
 ---
 You need to create object instances, and after the initialization you need to set some function for all the instnaces.
 
-```JavaaScript
+```javascript
 var op = function(){};
 op.prototype.add = function() {
     var i, s = 0;
