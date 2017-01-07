@@ -1,25 +1,69 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!!!+++"
+title:  "JavaScript Object Instances"
 date:   2016-12-27 03:39:33 +0100
-categories: jekyll update
+categories: JavaScript
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight javascript %}
+var op = function(){};
+op.prototype.add = function() {
+    var i, s = 0;
+    for (i = 0; i &lt; arguments.length; i++) {
+        s += arguments[i];
+    }
+    return s;
+}
+var i = new op;
+console.log(i.add(1, 2, 3, 4));
+op.prototype.mul = function() {
+    var i, m = 1;
+    for (i = 0; i &lt; arguments.length; i++) {
+        m *= arguments[i];
+    }
+    return m;
+}
+console.log(i.mul(1, 2, 3, 4));
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+You need to create object instances, and after the initialization you need to set some function for all the instnaces.
+<pre>var op = function(){};
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+op.prototype.add = function() {
+    var i, s = 0;
+    for (i = 0; i &lt; arguments.length; i++) {
+        s += arguments[i];
+    }
+    return s;
+}
+
+var i = new op;
+
+console.log(i.add(1, 2, 3, 4));
+
+op.prototype.mul = function() {
+    var i, m = 1;
+    for (i = 0; i &lt; arguments.length; i++) {
+        m *= arguments[i];
+    }
+    return m;
+}
+
+console.log(i.mul(1, 2, 3, 4));
+</pre>
+This will return 10, 24.
+Any other instance we create with the `new` will have the `add` and `mul` functions.
+
+Even if we create new instance `i2` and add the `quad` to the instance prototype we will see all instances share the same prototype.
+<pre>var i2 = new op;
+Object.getPrototypeOf(i2).quad = function(){
+	var i, qs = 0;
+    for (i = 0; i &lt; arguments.length; i++) {
+        qs += (arguments[i]*arguments[i]);
+    }
+    return qs;
+}
+
+console.log(i2.quad(1, 2, 3, 4));
+console.log(i.quad(1, 2, 3, 4));</pre>
+Returns 30,30
