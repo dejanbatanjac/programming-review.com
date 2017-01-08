@@ -4,11 +4,11 @@ title:  "Customize images layout in WordPress"
 date:   2017-01-08 03:39:33 +0100
 categories: wordpress themes images
 ---
->In WordPress need every image to link to full image and be right aligned. How to achieve that.
+>In WordPress I need every images to be right aligned. Also clicking the image should open the full image. How to achieve that?
 
 This would be the code you need to set inside your theme:
 
-```php 
+``` php 
 add_action( 'after_setup_theme', '_20170108_setup' );
 
 function _20170108_setup() {
