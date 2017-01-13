@@ -9,8 +9,8 @@ It is hard to create good CSV parser but using NodeJS `fast-csv` this is not har
 Let's say we have a CSV like this:
 
 | name | address | stars | contact | phone | uri |
-|--|--|--|--|--|--|
-|Bond|Bond Street 007|5|Ian Fleming|1-270-665|	http://www.007.com/contact/ |
+|---|---|---|---|---|---|
+| Bond | Bond Street 007 | 5 | Ian Fleming | 1-270-665 | http://www.007.com/contact/ |
 
 Here is our JavaScript parser.
 
