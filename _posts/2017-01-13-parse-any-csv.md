@@ -6,10 +6,13 @@ categories: JavaScript
 ---
 It is hard to create good CSV parser but using NodeJS `fast-csv` this is not hard at all.
 
-| name    |	address    |	stars |	contact	| phone	| uri |
-|---------|------------|----------|---------|-------|-----|
-|Bond	   Bond Street 007 | 	5	| Ian Fleming	| 1-270-665 |	http://www.007.com/contact/ |
+Let's say we have a CSV like this:
 
+| name|address|stars|contact|phone|uri|
+|--|--|--|--|--|--|
+|Bond|Bond Street 007|5|Ian Fleming|1-270-665|	http://www.007.com/contact/ |
+
+Here is our JavaScript parser.
 
 ```javascript
 /**
@@ -33,7 +36,7 @@ function isValidUTF8( buf ) {
     return Buffer.compare( new Buffer( buf.toString(), 'utf8' ), buf ) === 0;
 }
 
-var stream = fs.createReadStream( 'anything.csv' );
+var stream = fs.createReadStream( 'bond.csv' );
 
 /**
  * Fast-csv parsing options as defined https://www.npmjs.com/package/fast-csv.
