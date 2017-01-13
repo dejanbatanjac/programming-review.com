@@ -6,6 +6,11 @@ categories: JavaScript
 ---
 It is hard to create good CSV parser but using NodeJS `fast-csv` this is not hard at all.
 
+| name    |	address    |	stars |	contact	| phone	| uri |
+|---------|------------|----------|---------|-------|-----|
+|Bond	   Bond Street 007 | 	5	| Ian Fleming	| 1-270-665 |	http://www.007.com/contact/ |
+
+
 ```javascript
 /**
  * CSV processor based on fast-csv
