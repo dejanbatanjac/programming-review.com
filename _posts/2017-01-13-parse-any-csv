@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Parse any csv into HTML"
+date:   2017-01-13 03:39:33 +0100
+categories: JavaScript
+---
+It is hard to create good CSV parser but using NodeJS `fast-csv` this is not hard at all.
+
 ```javascript
 /**
  * CSV processor based on fast-csv
