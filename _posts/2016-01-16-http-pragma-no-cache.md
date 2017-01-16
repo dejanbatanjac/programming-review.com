@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CTRL + F5 to refresh your browser"
+title:  "HTTP PRAGMA NO CACHE and CTRL + F5 to refresh your HTML"
 date:   2017-01-16 03:39:33 +0100
 categories: Browser
 ---
