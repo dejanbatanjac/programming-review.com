@@ -5,7 +5,7 @@ date:   2017-01-16 03:39:33 +0100
 categories: Browser
 ---
 
-Note the `[HTTP_PRAGMA] => no-cache` part from the following array.
+Note the `[HTTP_PRAGMA] => no-cache` and `[HTTP_CACHE_CONTROL] => no-cache` from the following array.
 
 ```
 Array
@@ -58,6 +58,6 @@ echo '</pre>';
 echo '</body>';
 echo '</html>';
 ```
- The `[HTTP_PRAGMA] => no-cache` will be there only if you call `CTRL + F5`, else it will not be there.
+ The `[HTTP_PRAGMA] => no-cache` and `[HTTP_CACHE_CONTROL] => no-cache` will be there only if you call `CTRL + F5`.
  
  
