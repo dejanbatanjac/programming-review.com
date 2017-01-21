@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "React tips"
+date:   2017-01-12 03:39:33 +0100
+categories: JavaScript
+---
+
+React.js means breaking with the dominant MVC frameworks style.
+React.js means componenents.
+React.js components may have the state.
+React.js components may not have the state (stateless).
+React.js components view (V) is function of state (S); V=f(S).
+
+On state change React components will be redrawn.
+However, the React tip is about creating the stateless components.
+These can be controled with the param input paramters.
+
+We use Bable with React today:
+In Babel `const element = <div />;` will convert to `const element = React.createElement("div", null);`
+
+---
